@@ -23,9 +23,9 @@ private Cloudinary cloudinary;
 	public CloudManager() {
 
 		this.cloudinary = new Cloudinary(ObjectUtils.asMap(
-				"cloud_name", "dumceaten",
-				"api_key", "223613328412727",
-				"api_secret", "IhKdztXhR4ZbCtvhKGb8_wwWG4Y",
+				"cloud_name", "codifybalance",
+				"api_key", "476932977549833",
+				"api_secret", "SVh_CnlCZFwNEM_r7iy1gyDCcXA",
 				"secure", true));
 		
 	}
