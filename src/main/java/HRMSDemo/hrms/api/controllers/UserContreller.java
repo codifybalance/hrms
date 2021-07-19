@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.validation.Valid;
+
 import org.springframework.validation.FieldError;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -16,10 +18,11 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import HRMSDemo.hrms.business.abstracts.UserService;
+import HRMSDemo.hrms.core.entities.User;
 import HRMSDemo.hrms.core.utilities.results.DataResult;
 import HRMSDemo.hrms.core.utilities.results.ErrorDataResult;
 import HRMSDemo.hrms.core.utilities.results.Result;
-import HRMSDemo.hrms.entities.concretes.User;
+
 
 
 @RestController
@@ -39,7 +42,7 @@ public class UserContreller {
 	}
 	
 	@PostMapping("/add")
-	public Result add(@RequestBody User user) {
+	public Result add(@Valid @RequestBody User user) {
 		return this.userService.add(user);
 	}
 	
