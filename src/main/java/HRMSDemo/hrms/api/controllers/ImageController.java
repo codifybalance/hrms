@@ -40,8 +40,8 @@ public class ImageController {
 	}
 	
 	@PostMapping("/add")
-	public Result add(@RequestParam(value = "employeeId") int jobseekerId,@RequestParam(value = "imageFile") MultipartFile imageFile) {
-		return this.imageService.add(jobseekerId,imageFile);
+	public Result add(@RequestParam(value = "employeeId") int employeeId,@RequestParam(value = "imageFile") MultipartFile imageFile) {
+		return this.imageService.add(employeeId,imageFile);
 	}
 	
 	@PostMapping("/update")
